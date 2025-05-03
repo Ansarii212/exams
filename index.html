@@ -102,9 +102,9 @@
   <button class="button" onclick="showQR('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
 
   <div class="section-title">المرحلة المتوسطة</div>
-  <button class="button" onclick="showMiddleQR('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
-  <button class="button" onclick="showMiddleQR('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط الترم الثالث</button>
-  <button class="button" onclick="showMiddleQR('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/10XTpXplqt94GVYeaubSzVCs6Yjzw488z/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/10XTpXplqt94GVYeaubSzVCs6Yjzw488z/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
 
   <div class="section-title">المرحلة الثانوية</div>
   <button class="button" onclick="showQR('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
@@ -137,23 +137,14 @@
     qr.value = defaultPdfLink;
     document.getElementById('qr-label').textContent = text;
     document.getElementById('qr-section').style.display = 'block';
-    setTimeout(() => {
-      if (confirm("هل تريد الانتقال إلى الملف؟")) {
-        window.open(defaultPdfLink, '_blank');
-      }
-    }, 100);
+    window.open(defaultPdfLink, '_blank');
   }
 
-  function showMiddleQR(text, link) {
-    alert("جاري تجهيز الملفات ورفعها على الموقع...");
+  function goToLink(text, link) {
     qr.value = link;
     document.getElementById('qr-label').textContent = text;
     document.getElementById('qr-section').style.display = 'block';
-    setTimeout(() => {
-      if (confirm("هل تريد الانتقال إلى الملف؟")) {
-        window.open(link, '_blank');
-      }
-    }, 100);
+    window.open(link, '_blank');
   }
 
   function saveQR() {
