@@ -150,6 +150,24 @@
     .main-button:hover {
       background-color: #8b5e3c;
     }
+
+    .links-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .links-row a {
+      color: #4b2e2e;
+      text-decoration: none;
+    }
+
+    .social-links a {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
   </style>
 </head>
 <body>
@@ -157,6 +175,16 @@
 <div class="top-header">
   <h2>موقع خدمات المعلم والطالب 🇸🇦♥️</h2>
   <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة 🇸🇦♥️</p>
+</div>
+
+<div class="link-container">
+  <div class="links-row">
+    <a href="#home">الصفحة الرئيسية</a>
+    <a href="#reviews">مراجعات الاختبارات</a>
+    <a href="#certificate">خدمة إنشاء شهادة تقدير</a>
+    <a href="#qrcode">خدمة تحويل الروابط إلى QRCode</a>
+    <a href="#madrasati">خدمة تحضير مدرستي</a>
+  </div>
 </div>
 
 <div class="centered">
@@ -189,18 +217,11 @@
   </div>
 
   <div class="social-links">
-    <a href="https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv" target="_blank">اشتراك في يوتيوب</a>
-    <a href="https://twitter.com/forms_teachers" target="_blank">تابعني على X</a>
+    <a href="https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv" target="_blank" class="main-button">اشتراك في يوتيوب</a>
+    <a href="https://twitter.com/forms_teachers" target="_blank" class="main-button">تابعني على X</a>
   </div>
 
   <div class="footer-links">
-    <div class="links-row">
-      <a href="#home">الصفحة الرئيسية</a>
-      <a href="#reviews">مراجعات الاختبارات</a>
-      <a href="#certificate">خدمة إنشاء شهادة تقدير</a>
-      <a href="#qrcode">خدمة تحويل الروابط إلى QRCode</a>
-      <a href="#madrasati">خدمة تحضير مدرستي</a>
-    </div>
     <div class="links-row">
       <a href="#privacy-policy">سياسة الخصوصية</a>
       <a href="#terms">شروط الاستخدام</a>
@@ -227,20 +248,4 @@
     document.getElementById('qr-section').style.display = 'block';
   }
 
-  function goToLink(text, link) {
-    qr.value = link;
-    document.getElementById('qr-label').textContent = text;
-    document.getElementById('qr-section').style.display = 'block';
-    window.open(link, '_blank');
-  }
-
-  function saveQR() {
-    const link = document.createElement('a');
-    link.href = qr.toDataURL();
-    link.download = 'qr_code.png';
-    link.click();
-  }
-</script>
-
-</body>
-</html>
+  function goToLink
