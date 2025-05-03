@@ -82,68 +82,73 @@
       text-align: center;
     }
 
-    .qr-buttons-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-
-    .qr-buttons-container button {
-      width: 30%;
-    }
-
-    #qr-section {
-      display: none;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    #footer {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 16px;
-    }
-
-    .footer-links a {
+    .small-link {
+      font-size: 14px;
       text-decoration: none;
       color: #4b2e2e;
     }
 
-    .subscribe-buttons {
-      display: flex;
-      justify-content: space-evenly;
+    .link-container {
+      text-align: center;
       margin-top: 20px;
     }
 
-    .subscribe-buttons button {
-      font-size: 16px;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: none;
+    .social-links {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
     }
 
-    .youtube-button {
-      background-color: red;
+    .social-links a {
+      background-color: #e01f2e;
       color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
     }
 
-    .x-button {
-      background-color: black;
-      color: white;
+    .social-links a:nth-child(2) {
+      background-color: #1d1d1b;
     }
 
-    .warning {
-      font-size: 12px;
-      color: red;
+    .social-links a:hover {
+      background-color: #f5d7a1;
+    }
+
+    #qr-section-small {
       margin-top: 10px;
+    }
+
+    .links-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .links-row a {
+      color: #4b2e2e;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .main-button {
+      background-color: #4b2e2e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .main-button:hover {
+      background-color: #8b5e3c;
     }
   </style>
 </head>
@@ -151,51 +156,60 @@
 
 <div class="top-header">
   <h2>موقع خدمات المعلم والطالب 🇸🇦♥️</h2>
-  <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة</p>
+  <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة 🇸🇦♥️</p>
 </div>
 
 <div class="centered">
   <h1 class="title">مراجعات الاختبارات</h1>
 
   <div class="section-title">المرحلة الابتدائية</div>
-  <div class="qr-buttons-container">
-    <button class="button" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة انجليزي أول ابتدائي الترم الثالث</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة انجليزي ثاني ابتدائي الترم الثالث</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة انجليزي ثالث ابتدائي الترم الثالث</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي رابع ابتدائي الترم الثالث')">مراجعة انجليزي رابع ابتدائي الترم الثالث</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي خامس ابتدائي الترم الثالث')">مراجعة انجليزي خامس ابتدائي الترم الثالث</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
+  <div style="display: flex; justify-content: space-between; gap: 10px;">
+    <button class="button" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة أول ابتدائي</button>
+    <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة ثاني ابتدائي</button>
+    <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة ثالث ابتدائي</button>
   </div>
 
   <div class="section-title">المرحلة المتوسطة</div>
-  <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
-  <button class="button" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط الترم الثالث</button>
-  <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/10XTpXplqt94GVYeaubSzVCs6Yjzw488z/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
+  <div style="display: flex; justify-content: space-between; gap: 10px;">
+    <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة أول متوسط</button>
+    <button class="button" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة ثاني متوسط</button>
+    <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/10XTpXplqt94GVYeaubSzVCs6Yjzw488z/view?usp=drivesdk')">مراجعة ثالث متوسط</button>
+  </div>
 
   <div class="section-title">المرحلة الثانوية</div>
-  <button class="button" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة أول ثانوي</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة ثاني ثانوي</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة ثالث ثانوي</button>
 
   <div id="qr-section">
     <p class="label-text" id="qr-label"></p>
     <canvas id="qr-code"></canvas><br>
-    <button onclick="saveQR()">حفظ رمز QR</button>
-    <div class="warning">تنبيه: اذا لم يتم حفظ صورة QR من خلال متصفح سفاري، افتح الصفحة من متصفح كروم.</div>
+    <button onclick="saveQR()" class="button">حفظ رمز QR</button>
+    <p class="small-link" id="qr-section-small">تنبيه: إذا لم يتم حفظ صورة رمز الـ QR من خلال متصفح سفاري، افتح الصفحة من متصفح كروم</p>
   </div>
 
-  <div class="subscribe-buttons">
-    <button class="youtube-button" onclick="window.open('https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv')">الاشتراك في يوتيوب</button>
-    <button class="x-button" onclick="window.open('https://twitter.com/forms_teachers')">تابعني على X</button>
+  <div class="social-links">
+    <a href="https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv" target="_blank">اشتراك في يوتيوب</a>
+    <a href="https://twitter.com/forms_teachers" target="_blank">تابعني على X</a>
   </div>
 
-  <div id="footer">
-    <div class="footer-links">
-      <a href="https://ansarii212.github.io/exams/" target="_blank">الصفحة الرئيسية</a>
-      <a href="mailto:ahloka24@gmail.com" target="_blank">اتصل بنا</a>
-      <a href="https://www.termsfeed.com/live/f3f774b3-bb55-4a12-a506-208ca1c1fa4d" target="_blank">شروط الاستخدام</a>
-      <a href="https://www.termsfeed.com/live/6fda016f-e46f-4fd9-a77a-0151c3a541cf" target="_blank">سياسة الخصوصية</a>
+  <div class="footer-links">
+    <div class="links-row">
+      <a href="#home">الصفحة الرئيسية</a>
+      <a href="#reviews">مراجعات الاختبارات</a>
+      <a href="#certificate">خدمة إنشاء شهادة تقدير</a>
+      <a href="#qrcode">خدمة تحويل الروابط إلى QRCode</a>
+      <a href="#madrasati">خدمة تحضير مدرستي</a>
     </div>
+    <div class="links-row">
+      <a href="#privacy-policy">سياسة الخصوصية</a>
+      <a href="#terms">شروط الاستخدام</a>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+  </div>
+
+  <div class="support">
+    للدعم الفني الرجاء التواصل على هذا الايميل: <a href="mailto:ahloka24@gmail.com">ahloka24@gmail.com</a>
   </div>
 </div>
 
