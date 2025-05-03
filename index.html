@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>مراجعات الاختبارات - موقع خدمات المعلم و الطالب </title>
+  <title>مراجعات الاختبارات</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <style>
     body {
@@ -34,12 +34,12 @@
       border: 2px solid #8b5e3c;
       border-radius: 12px;
       color: #4b2e2e;
-      padding: 15px;
-      font-size: 18px;
-      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 5px;
       cursor: pointer;
-      width: 100%;
-      max-width: 400px;
+      width: auto;
+      min-width: 180px;
     }
 
     .centered {
@@ -64,6 +64,7 @@
     .top-header {
       text-align: center;
       margin-bottom: 20px;
+      position: relative;
     }
 
     .top-header h2 {
@@ -75,75 +76,77 @@
       font-size: 18px;
     }
 
-    .support, .footer {
-      margin-top: 40px;
-      font-weight: bold;
-      color: black;
-      text-align: center;
-    }
-
-    .note {
-      color: red;
-      font-size: 12px;
-      margin-top: 10px;
-      display: none;
-    }
-
-    .top-button {
+    .home-button {
       position: absolute;
-      top: 20px;
       left: 20px;
-    }
-
-    .main-btn {
+      top: 10px;
       background-color: #8b5e3c;
-      border: 2px solid white;
-      border-radius: 20px;
       color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .social-box {
-      border: 2px solid #8b5e3c;
-      border-radius: 15px;
-      padding: 20px;
-      margin: 30px auto 10px;
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .social-box .button {
-      width: 80%;
-    }
-
-    .footer-links {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 14px;
+      cursor: pointer;
       font-size: 14px;
     }
 
+    .support, .links-section {
+      margin-top: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .alert-text {
+      color: red;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .social-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #8b5e3c;
+      border-radius: 15px;
+      display: inline-block;
+      background-color: #fff8e1;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .small-button {
+      background-color: #f5d7a1;
+      border: 2px solid #8b5e3c;
+      border-radius: 12px;
+      color: #4b2e2e;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 130px;
+    }
+
     .footer-links a {
-      margin: 5px 0;
+      display: block;
       color: #4b2e2e;
       text-decoration: none;
+      margin: 8px 0;
     }
 
     .footer-links a:hover {
       text-decoration: underline;
     }
+
   </style>
 </head>
 <body>
 
-<a href="https://ansarii212.github.io/exams/" class="main-btn top-button">الصفحة الرئيسية</a>
-
 <div class="top-header">
-  <h2>موقع خدمات المعلم</h2>
-  <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة</p>
+  <button class="home-button" onclick="location.href='https://ansarii212.github.io/exams/'">الصفحة الرئيسية</button>
+  <h2>موقع خدمات المعلم والطالب</h2>
+  <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة 🇸🇦♥️</p>
 </div>
 
 <div class="centered">
@@ -170,20 +173,25 @@
   <div id="qr-section">
     <p class="label-text" id="qr-label"></p>
     <canvas id="qr-code"></canvas><br>
-    <button class="button" onclick="saveQR()">حفظ رمز QR</button>
-    <p class="note" id="note">تنبيه: إذا لم يتم حفظ صورة QR من خلال متصفح سفاري، افتح الصفحة من متصفح كروم</p>
+    <button class="small-button" onclick="saveQR()">حفظ رمز QR</button>
+    <p class="alert-text">تنبيه: إذا لم يتم حفظ صورة QR من خلال متصفح سفاري، افتح الصفحة من متصفح كروم</p>
   </div>
 
   <div class="social-box">
-    <button class="button" onclick="window.open('https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv', '_blank')">اشترك في قناتي على يوتيوب</button>
-    <button class="button" onclick="window.open('https://x.com/forms_teachers', '_blank')">تابعني على X</button>
+    <div class="social-buttons">
+      <button class="small-button" onclick="window.open('https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv')">اشترك في يوتيوب</button>
+      <button class="small-button" onclick="window.open('https://x.com/forms_teachers')">تابعني على X</button>
+    </div>
   </div>
 
-  <div class="footer-links">
-    <a href="#">سياسة الخصوصية</a>
-    <a href="#">شروط الاستخدام</a>
-    <a href="mailto:ahloka24@gmail.com">اتصل بنا: ahloka24@gmail.com</a>
+  <div class="support links-section">
+    <div class="footer-links">
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">شروط الاستخدام</a>
+      <a href="mailto:ahloka24@gmail.com">اتصل بنا: ahloka24@gmail.com</a>
+    </div>
   </div>
+
 </div>
 
 <script>
@@ -194,15 +202,16 @@
   });
 
   function showMessage(text) {
-    alert("جاري تجهيز الملفات ورفعها على الموقع...");
+    qr.value = '';
+    document.getElementById('qr-label').textContent = '';
     document.getElementById('qr-section').style.display = 'none';
+    alert("جاري تجهيز الملفات ورفعها على الموقع...");
   }
 
   function goToLink(text, link) {
     qr.value = link;
     document.getElementById('qr-label').textContent = text;
     document.getElementById('qr-section').style.display = 'block';
-    document.getElementById('note').style.display = 'block';
     window.open(link, '_blank');
   }
 
