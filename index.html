@@ -86,11 +86,12 @@
     .warning {
       background-color: #f8d7da;
       color: #721c24;
-      padding: 10px;
+      padding: 5px;
       border: 1px solid #f5c6cb;
       border-radius: 5px;
       margin: 20px 0;
       text-align: center;
+      font-size: 14px;
     }
 
     /* تنسيق زر الصفحة الرئيسية */
@@ -110,6 +111,35 @@
     .home-button:hover {
       background-color: #f5d7a1;
     }
+
+    /* تنسيق مربع الاشتراك */
+    .subscription-box {
+      background-color: #f5d7a1;
+      border: 2px solid #8b5e3c;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subscription-button {
+      background-color: #8b5e3c;
+      border: 2px solid white;
+      border-radius: 25px;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .subscription-button:hover {
+      background-color: #f5d7a1;
+    }
+
   </style>
 </head>
 <body>
@@ -120,13 +150,8 @@
 </a>
 
 <div class="top-header">
-  <h2>موقع خدمات المعلم و الطالب </h2>
+  <h2>موقع خدمات المعلم</h2>
   <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة 🇸🇦♥️</p>
-</div>
-
-<!-- عبارة التنبيه -->
-<div class="warning">
-  تنبيه: اذا لم يتم حفظ صورة QR Code من خلال متصفح سفاري، افتح الصفحة من متصفح كروم
 </div>
 
 <div class="centered">
@@ -153,7 +178,18 @@
   <div id="qr-section">
     <p class="label-text" id="qr-label"></p>
     <canvas id="qr-code"></canvas><br>
-    <button onclick="saveQR()">حفظ رمز QR</button>
+    <button class="button" onclick="saveQR()">حفظ رمز QR</button>
+  </div>
+
+  <!-- تنبيه صغير أسفل زر حفظ QR -->
+  <div class="warning">
+    تنبيه: اذا لم يتم حفظ صورة QR Code من خلال متصفح سفاري، افتح الصفحة من متصفح كروم
+  </div>
+
+  <!-- مربع الاشتراك في يوتيوب وX -->
+  <div class="subscription-box">
+    <button class="subscription-button" onclick="window.open('https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv', '_blank')">اشترك في يوتيوب</button>
+    <button class="subscription-button" onclick="window.open('https://x.com/forms_teachers', '_blank')">تابعني على X</button>
   </div>
 
   <div class="support">
