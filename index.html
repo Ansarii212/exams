@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>موقع خدمات المعلم</title>
+  <title>مراجعات الاختبارات</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <style>
     body {
@@ -34,12 +34,12 @@
       border: 2px solid #8b5e3c;
       border-radius: 12px;
       color: #4b2e2e;
-      padding: 15px;
-      font-size: 18px;
-      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 5px;
       cursor: pointer;
-      width: 100%;
-      max-width: 400px;
+      width: auto;
+      min-width: 180px;
     }
 
     .centered {
@@ -64,6 +64,7 @@
     .top-header {
       text-align: center;
       margin-bottom: 20px;
+      position: relative;
     }
 
     .top-header h2 {
@@ -75,97 +76,67 @@
       font-size: 18px;
     }
 
-    .support {
-      margin-top: 50px;
-      font-weight: bold;
-      color: black;
-      text-align: center;
-    }
-
-    .small-link {
-      font-size: 14px;
-      text-decoration: none;
-      color: #4b2e2e;
-    }
-
-    .link-container {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      background-color: #e01f2e;
+    .home-button {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      background-color: #8b5e3c;
       color: white;
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 14px;
     }
 
-    .social-links a:nth-child(2) {
-      background-color: #1d1d1b;
+    .support, .links-section {
+      margin-top: 40px;
+      font-weight: bold;
+      text-align: center;
     }
 
-    .social-links a:hover {
-      background-color: #f5d7a1;
-    }
-
-    #qr-section-small {
+    .alert-text {
+      color: red;
+      font-size: 12px;
       margin-top: 10px;
     }
 
-    .links-row {
+    .social-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #8b5e3c;
+      border-radius: 15px;
+      display: inline-block;
+      background-color: #fff8e1;
+    }
+
+    .social-buttons {
       display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-      font-size: 14px;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .links-row a {
+    .small-button {
+      background-color: #f5d7a1;
+      border: 2px solid #8b5e3c;
+      border-radius: 12px;
       color: #4b2e2e;
-      text-decoration: none;
-    }
-
-    .footer-links {
+      padding: 8px 12px;
       font-size: 14px;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .main-button {
-      background-color: #4b2e2e;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      border: none;
       cursor: pointer;
-      font-size: 16px;
+      min-width: 130px;
     }
 
-    .main-button:hover {
-      background-color: #8b5e3c;
-    }
-
-    .links-row {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .links-row a {
+    .footer-links a {
+      display: block;
       color: #4b2e2e;
       text-decoration: none;
+      margin: 8px 0;
     }
 
-    .social-links a {
-      margin-left: 10px;
-      margin-right: 10px;
+    .footer-links a:hover {
+      text-decoration: underline;
     }
 
   </style>
@@ -173,65 +144,54 @@
 <body>
 
 <div class="top-header">
-  <h2>موقع خدمات المعلم والطالب 🇸🇦♥️</h2>
+  <button class="home-button" onclick="location.href='https://ansarii212.github.io/exams/'">الصفحة الرئيسية</button>
+  <h2>موقع خدمات المعلم والطالب</h2>
   <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة 🇸🇦♥️</p>
-</div>
-
-<div class="link-container">
-  <div class="links-row">
-    <a href="#home">الصفحة الرئيسية</a>
-    <a href="#reviews">مراجعات الاختبارات</a>
-    <a href="#certificate">خدمة إنشاء شهادة تقدير</a>
-    <a href="#qrcode">خدمة تحويل الروابط إلى QRCode</a>
-    <a href="#madrasati">خدمة تحضير مدرستي</a>
-  </div>
 </div>
 
 <div class="centered">
   <h1 class="title">مراجعات الاختبارات</h1>
 
   <div class="section-title">المرحلة الابتدائية</div>
-  <div style="display: flex; justify-content: space-between; gap: 10px;">
-    <button class="button" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة أول ابتدائي</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة ثاني ابتدائي</button>
-    <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة ثالث ابتدائي</button>
-  </div>
+  <button class="button" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة انجليزي أول ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة انجليزي ثاني ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة انجليزي ثالث ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي رابع ابتدائي الترم الثالث')">مراجعة انجليزي رابع ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي خامس ابتدائي الترم الثالث')">مراجعة انجليزي خامس ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
 
   <div class="section-title">المرحلة المتوسطة</div>
-  <div style="display: flex; justify-content: space-between; gap: 10px;">
-    <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة أول متوسط</button>
-    <button class="button" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة ثاني متوسط</button>
-    <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/10XTpXplqt94GVYeaubSzVCs6Yjzw488z/view?usp=drivesdk')">مراجعة ثالث متوسط</button>
-  </div>
+  <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/1pob2mnm_V1sMjodXwxSQ-ieGsnZjFBTR/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
 
   <div class="section-title">المرحلة الثانوية</div>
-  <button class="button" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة أول ثانوي</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة ثاني ثانوي</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة ثالث ثانوي</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
 
   <div id="qr-section">
     <p class="label-text" id="qr-label"></p>
     <canvas id="qr-code"></canvas><br>
-    <button onclick="saveQR()" class="button">حفظ رمز QR</button>
-    <p class="small-link" id="qr-section-small">تنبيه: إذا لم يتم حفظ صورة رمز الـ QR من خلال متصفح سفاري، افتح الصفحة من متصفح كروم</p>
+    <button class="small-button" onclick="saveQR()">حفظ رمز QR</button>
+    <p class="alert-text">تنبيه: إذا لم يتم حفظ صورة QR من خلال متصفح سفاري، افتح الصفحة من متصفح كروم</p>
   </div>
 
-  <div class="social-links">
-    <a href="https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv" target="_blank" class="main-button">اشتراك في يوتيوب</a>
-    <a href="https://twitter.com/forms_teachers" target="_blank" class="main-button">تابعني على X</a>
-  </div>
-
-  <div class="footer-links">
-    <div class="links-row">
-      <a href="#privacy-policy">سياسة الخصوصية</a>
-      <a href="#terms">شروط الاستخدام</a>
-      <a href="#contact">اتصل بنا</a>
+  <div class="social-box">
+    <div class="social-buttons">
+      <button class="small-button" onclick="window.open('https://youtube.com/@alrahhala?si=X2SmXu4E-CnH-MCv')">اشترك في يوتيوب</button>
+      <button class="small-button" onclick="window.open('https://x.com/forms_teachers')">تابعني على X</button>
     </div>
   </div>
 
-  <div class="support">
-    للدعم الفني الرجاء التواصل على هذا الايميل: <a href="mailto:ahloka24@gmail.com">ahloka24@gmail.com</a>
+  <div class="support links-section">
+    <div class="footer-links">
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">شروط الاستخدام</a>
+      <a href="mailto:ahloka24@gmail.com">اتصل بنا: ahloka24@gmail.com</a>
+    </div>
   </div>
+
 </div>
 
 <script>
@@ -242,10 +202,26 @@
   });
 
   function showMessage(text) {
-    alert("جاري تجهيز الملفات ورفعها على الموقع...");
     qr.value = '';
-    document.getElementById('qr-label').textContent = text;
-    document.getElementById('qr-section').style.display = 'block';
+    document.getElementById('qr-label').textContent = '';
+    document.getElementById('qr-section').style.display = 'none';
+    alert("جاري تجهيز الملفات ورفعها على الموقع...");
   }
 
-  function goToLink
+  function goToLink(text, link) {
+    qr.value = link;
+    document.getElementById('qr-label').textContent = text;
+    document.getElementById('qr-section').style.display = 'block';
+    window.open(link, '_blank');
+  }
+
+  function saveQR() {
+    const link = document.createElement('a');
+    link.href = qr.toDataURL();
+    link.download = 'qr_code.png';
+    link.click();
+  }
+</script>
+
+</body>
+</html>
