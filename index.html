@@ -94,12 +94,12 @@
   <h1 class="title">مراجعات الاختبارات</h1>
 
   <div class="section-title">المرحلة الابتدائية</div>
-  <button class="button" onclick="showQR('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة انجليزي أول ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة انجليزي ثاني ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة انجليزي ثالث ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي رابع ابتدائي الترم الثالث')">مراجعة انجليزي رابع ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي خامس ابتدائي الترم الثالث')">مراجعة انجليزي خامس ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة انجليزي أول ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة انجليزي ثاني ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة انجليزي ثالث ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي رابع ابتدائي الترم الثالث')">مراجعة انجليزي رابع ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي خامس ابتدائي الترم الثالث')">مراجعة انجليزي خامس ابتدائي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
 
   <div class="section-title">المرحلة المتوسطة</div>
   <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
@@ -107,9 +107,9 @@
   <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/10XTpXplqt94GVYeaubSzVCs6Yjzw488z/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
 
   <div class="section-title">المرحلة الثانوية</div>
-  <button class="button" onclick="showQR('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
-  <button class="button" onclick="showQR('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
+  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
 
   <div id="qr-section">
     <p class="label-text" id="qr-label"></p>
@@ -130,14 +130,11 @@
     value: ''
   });
 
-  const defaultPdfLink = "https://drive.google.com/file/d/16t9nu3lgTRzxUrJg6vBrqGQfRDbeDlJk/view?usp=drivesdk";
-
-  function showQR(text) {
+  function showMessage(text) {
     alert("جاري تجهيز الملفات ورفعها على الموقع...");
-    qr.value = defaultPdfLink;
+    qr.value = '';
     document.getElementById('qr-label').textContent = text;
     document.getElementById('qr-section').style.display = 'block';
-    window.open(defaultPdfLink, '_blank');
   }
 
   function goToLink(text, link) {
