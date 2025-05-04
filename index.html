@@ -6,115 +6,125 @@
   <title>موقع خدمات المعلم</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f3e6;
-      color: #5a3e1b;
+      font-family: 'Cairo', sans-serif;
+      background-color: #fdf6ec;
       margin: 0;
       padding: 0;
     }
     .container {
       max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background-color: #fff9ef;
+      margin: 30px auto;
+      background-color: #fff;
+      border: 4px double #c9a96e;
       border-radius: 15px;
-      border: 2px solid #deb887;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
     h1 {
       text-align: center;
-      font-size: 28px;
+      font-size: 32px;
+      color: #7b4f1d;
       margin-bottom: 10px;
-      color: #5a3e1b;
     }
     .intro {
       text-align: center;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #5f4321;
     }
     .section-title {
       font-size: 20px;
       font-weight: bold;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      border-bottom: 1px dashed #b28b51;
+      border-bottom: 2px dashed #c9a96e;
       padding-bottom: 5px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: #7b4f1d;
     }
     .button {
       display: block;
       width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      background-color: #deb887;
+      padding: 12px;
+      margin: 6px 0;
+      background-color: #d7a96f;
       color: white;
       border: none;
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     .button:hover {
-      background-color: #c79a66;
+      background-color: #b98d4f;
     }
     .qr-section {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
+    }
+    .qr-title {
+      font-size: 18px;
+      color: #5f4321;
+      margin-bottom: 10px;
     }
     .qr-image {
-      max-width: 200px;
+      max-width: 220px;
       margin-top: 10px;
+      border: 3px solid #d7a96f;
+      padding: 5px;
+      border-radius: 10px;
     }
     .save-button {
-      display: inline-block;
-      padding: 8px 16px;
-      background-color: #8b5e3c;
+      margin-top: 15px;
+      background-color: #7b4f1d;
       color: white;
       border: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 6px;
       cursor: pointer;
     }
     .footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 14px;
-      color: #8b5e3c;
+      color: #8a623b;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>موقع خدمات المعلم</h1>
-    <div class="intro">روابط مراجعات اللغة الإنجليزية للترم الثالث</div>
+    <div class="intro">روابط مراجعات اللغة الإنجليزية - الترم الثالث</div>
 
     <!-- المرحلة الابتدائية -->
     <div class="section-title">المرحلة الابتدائية</div>
-    <button class="button" onclick="goToLink('مراجعة أول ابتدائي', 'https://drive.google.com/file/d/1ABC1/view?usp=drivesdk')">مراجعة انجليزي أول ابتدائي</button>
-    <button class="button" onclick="goToLink('مراجعة ثاني ابتدائي', 'https://drive.google.com/file/d/1ABC2/view?usp=drivesdk')">مراجعة انجليزي ثاني ابتدائي</button>
-    <button class="button" onclick="goToLink('مراجعة ثالث ابتدائي', 'https://drive.google.com/file/d/1ABC3/view?usp=drivesdk')">مراجعة انجليزي ثالث ابتدائي</button>
-    <button class="button" onclick="goToLink('مراجعة رابع ابتدائي', 'https://drive.google.com/file/d/1ABC4/view?usp=drivesdk')">مراجعة انجليزي رابع ابتدائي</button>
-    <button class="button" onclick="goToLink('مراجعة خامس ابتدائي', 'https://drive.google.com/file/d/1ABC5/view?usp=drivesdk')">مراجعة انجليزي خامس ابتدائي</button>
-    <button class="button" onclick="goToLink('مراجعة سادس ابتدائي', 'https://drive.google.com/file/d/1ABC6/view?usp=drivesdk')">مراجعة انجليزي سادس ابتدائي</button>
+    <button class="button" onclick="goToLink('مراجعة أول ابتدائي', 'https://drive.google.com/file/d/1ABC1/view?usp=drivesdk')">مراجعة أول ابتدائي</button>
+    <button class="button" onclick="goToLink('مراجعة ثاني ابتدائي', 'https://drive.google.com/file/d/1ABC2/view?usp=drivesdk')">مراجعة ثاني ابتدائي</button>
+    <button class="button" onclick="goToLink('مراجعة ثالث ابتدائي', 'https://drive.google.com/file/d/1ABC3/view?usp=drivesdk')">مراجعة ثالث ابتدائي</button>
+    <button class="button" onclick="goToLink('مراجعة رابع ابتدائي', 'https://drive.google.com/file/d/1ABC4/view?usp=drivesdk')">مراجعة رابع ابتدائي</button>
+    <button class="button" onclick="goToLink('مراجعة خامس ابتدائي', 'https://drive.google.com/file/d/1ABC5/view?usp=drivesdk')">مراجعة خامس ابتدائي</button>
+    <button class="button" onclick="goToLink('مراجعة سادس ابتدائي', 'https://drive.google.com/file/d/1ABC6/view?usp=drivesdk')">مراجعة سادس ابتدائي</button>
 
     <!-- المرحلة المتوسطة -->
     <div class="section-title">المرحلة المتوسطة</div>
-    <button class="button" onclick="goToLink('مراجعة أول متوسط', 'https://drive.google.com/file/d/1XQ/view?usp=drivesdk')">مراجعة انجليزي أول متوسط</button>
-    <button class="button" onclick="goToLink('مراجعة ثاني متوسط', 'https://drive.google.com/file/d/1YQ/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط</button>
-    <button class="button" onclick="goToLink('مراجعة ثالث متوسط', 'https://drive.google.com/file/d/1ZQ/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط</button>
+    <button class="button" onclick="goToLink('مراجعة أول متوسط', 'https://drive.google.com/file/d/1XQ/view?usp=drivesdk')">مراجعة أول متوسط</button>
+    <button class="button" onclick="goToLink('مراجعة ثاني متوسط', 'https://drive.google.com/file/d/1YQ/view?usp=drivesdk')">مراجعة ثاني متوسط</button>
+    <button class="button" onclick="goToLink('مراجعة ثالث متوسط', 'https://drive.google.com/file/d/1ZQ/view?usp=drivesdk')">مراجعة ثالث متوسط</button>
 
     <!-- المرحلة الثانوية -->
     <div class="section-title">المرحلة الثانوية</div>
-    <button class="button" onclick="goToLink('مراجعة أول ثانوي', 'https://drive.google.com/file/d/1_j1w6qj9eFn0U6bSgOZx5t7pmOSoIECY/view?usp=drivesdk')">مراجعة انجليزي أول ثانوي</button>
-    <button class="button" onclick="goToLink('مراجعة ثاني ثانوي', 'https://drive.google.com/file/d/1TQ/view?usp=drivesdk')">مراجعة انجليزي ثاني ثانوي</button>
-    <button class="button" onclick="goToLink('مراجعة ثالث ثانوي', 'https://drive.google.com/file/d/1XYZ3/view?usp=drivesdk')">مراجعة انجليزي ثالث ثانوي</button>
+    <button class="button" onclick="goToLink('مراجعة أول ثانوي', 'https://drive.google.com/file/d/1_j1w6qj9eFn0U6bSgOZx5t7pmOSoIECY/view?usp=drivesdk')">مراجعة أول ثانوي</button>
+    <button class="button" onclick="goToLink('مراجعة ثاني ثانوي', 'https://drive.google.com/file/d/1TQ/view?usp=drivesdk')">مراجعة ثاني ثانوي</button>
+    <button class="button" onclick="goToLink('مراجعة ثالث ثانوي', 'https://drive.google.com/file/d/1XYZ3/view?usp=drivesdk')">مراجعة ثالث ثانوي</button>
 
     <!-- QR Section -->
     <div class="qr-section" id="qr-section" style="display: none;">
-      <h3 id="qr-title"></h3>
+      <div class="qr-title" id="qr-title"></div>
       <img id="qr-image" class="qr-image" src="" alt="QR Code" />
       <br>
       <button class="save-button" onclick="saveQR()">حفظ رمز QR</button>
     </div>
 
-    <div class="footer">جميع الحقوق محفوظة لخدمات المعلم</div>
+    <div class="footer">جميع الحقوق محفوظة - موقع خدمات المعلم</div>
   </div>
 
   <script>
