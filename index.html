@@ -200,8 +200,8 @@
   <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/1pob2mnm_V1sMjodXwxSQ-ieGsnZjFBTR/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
 
   <div class="section-title">المرحلة الثانوية</div>
-  <button class="button" onclick="showMessage('https://drive.google.com/file/d/1_j1w6qj9eFn0U6bSgOZx5t7pmOSoIECY/view?usp=drivesdk')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
-  <button class="button" onclick="showMessage('https://drive.google.com/file/d/1vw9ZcUF22fukcB_AHlSoZM9Q23LXUJR9/view?usp=drivesdk')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي أول ثانوي الترم الثالث', 'https://drive.google.com/file/d/1_j1w6qj9eFn0U6bSgOZx5t7pmOSoIECY/view?usp=drivesdk')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
+  <button class="button" onclick="goToLink('مراجعة انجليزي ثاني ثانوي الترم الثالث', 'https://drive.google.com/file/d/1_j1w6qj9eFn0U6bSgOZx5t7pmOSoIECY/view?usp=drivesdk')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
   <button class="button" onclick="showMessage('')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
 
   <div id="qr-section">
@@ -245,7 +245,7 @@
 
   function goToLink(text, link) {
     const masterURL = 'https://ansarii212.github.io/Master/';
-    qr.value = masterURL;  // فقط يعرض رابط الماستر
+    qr.value = masterURL;
     document.getElementById('qr-label').textContent = text;
     document.getElementById('qr-section').style.display = 'block';
     window.open(link, '_blank');
