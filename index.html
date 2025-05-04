@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>مراجعات الاختبارات</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -13,6 +13,36 @@
       padding: 20px;
       color: #4b2e2e;
       border: 10px solid #8b5e3c;
+    }
+
+    .home-button-top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .home-button-top button {
+      background-color: #8b5e3c;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .top-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .top-header h2 {
+      margin: 0;
+    }
+
+    .top-header p {
+      margin: 5px 0 0;
+      font-size: 18px;
     }
 
     h1.title {
@@ -39,9 +69,20 @@
       font-size: 16px;
       margin: 10px 5px;
       cursor: pointer;
+      width: auto;
       min-width: 180px;
-      display: inline-block;
-      animation: fadeIn 0.5s ease-in-out;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .button:nth-child(n) {
+      animation-delay: calc(var(--order) * 0.2s);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     .centered {
@@ -61,46 +102,6 @@
     .label-text {
       font-weight: bold;
       margin-bottom: 5px;
-    }
-
-    .top-header {
-      text-align: center;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    .top-header h2 {
-      margin: 0;
-    }
-
-    .top-header p {
-      margin: 5px 0 0;
-      font-size: 18px;
-    }
-
-    .home-button {
-      position: absolute;
-      left: 20px;
-      top: 10px;
-      background-color: #8b5e3c;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 8px 14px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .support, .links-section {
-      margin-top: 40px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .alert-text {
-      color: red;
-      font-size: 12px;
-      margin-top: 10px;
     }
 
     .social-box {
@@ -123,11 +124,17 @@
       background-color: #f5d7a1;
       border: 2px solid #8b5e3c;
       border-radius: 12px;
-      color: #000;
+      color: #4b2e2e;
       padding: 8px 12px;
       font-size: 14px;
       cursor: pointer;
       min-width: 130px;
+    }
+
+    .footer-links {
+      margin-top: 40px;
+      font-weight: bold;
+      text-align: center;
     }
 
     .footer-links a {
@@ -141,46 +148,21 @@
       text-decoration: underline;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .alert-text {
+      color: red;
+      font-size: 12px;
+      margin-top: 10px;
     }
 
-    @media (max-width: 600px) {
-      h1.title {
-        font-size: 24px;
-      }
-
-      .section-title {
-        font-size: 20px;
-      }
-
-      .button {
-        font-size: 14px;
-        min-width: 100%;
-        margin: 8px 0;
-      }
-
-      .top-header p {
-        font-size: 16px;
-      }
-
-      .home-button {
-        font-size: 12px;
-        padding: 6px 10px;
-      }
-
-      .small-button {
-        min-width: 100%;
-        margin-top: 10px;
-      }
-    }
   </style>
 </head>
 <body>
 
+<div class="home-button-top">
+  <button onclick="location.href='https://ansarii212.github.io/Master/'">الصفحة الرئيسية</button>
+</div>
+
 <div class="top-header">
-  <button class="home-button" onclick="location.href='https://ansarii212.github.io/exams/'">الصفحة الرئيسية</button>
   <h2>موقع خدمات المعلم والطالب</h2>
   <p>نسعد بخدمة المعلمين والمعلمات والطلاب والطالبات في مملكتنا الحبيبة 🇸🇦♥️</p>
 </div>
@@ -189,22 +171,22 @@
   <h1 class="title">مراجعات الاختبارات</h1>
 
   <div class="section-title">المرحلة الابتدائية</div>
-  <button class="button" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة انجليزي أول ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة انجليزي ثاني ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة انجليزي ثالث ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي رابع ابتدائي الترم الثالث')">مراجعة انجليزي رابع ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي خامس ابتدائي الترم الثالث')">مراجعة انجليزي خامس ابتدائي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
+  <button class="button" style="--order:1" onclick="showMessage('مراجعة انجليزي أول ابتدائي الترم الثالث')">مراجعة انجليزي أول ابتدائي الترم الثالث</button>
+  <button class="button" style="--order:2" onclick="showMessage('مراجعة انجليزي ثاني ابتدائي الترم الثالث')">مراجعة انجليزي ثاني ابتدائي الترم الثالث</button>
+  <button class="button" style="--order:3" onclick="showMessage('مراجعة انجليزي ثالث ابتدائي الترم الثالث')">مراجعة انجليزي ثالث ابتدائي الترم الثالث</button>
+  <button class="button" style="--order:4" onclick="showMessage('مراجعة انجليزي رابع ابتدائي الترم الثالث')">مراجعة انجليزي رابع ابتدائي الترم الثالث</button>
+  <button class="button" style="--order:5" onclick="showMessage('مراجعة انجليزي خامس ابتدائي الترم الثالث')">مراجعة انجليزي خامس ابتدائي الترم الثالث</button>
+  <button class="button" style="--order:6" onclick="showMessage('مراجعة انجليزي سادس ابتدائي الترم الثالث')">مراجعة انجليزي سادس ابتدائي الترم الثالث</button>
 
   <div class="section-title">المرحلة المتوسطة</div>
-  <button class="button" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
-  <button class="button" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط الترم الثالث</button>
-  <button class="button" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/1pob2mnm_V1sMjodXwxSQ-ieGsnZjFBTR/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
+  <button class="button" style="--order:7" onclick="goToLink('مراجعة انجليزي أول متوسط الترم الثالث', 'https://drive.google.com/file/d/18xJWxvk7Zcxklf0kZ0uVFIupUskblDTo/view?usp=drivesdk')">مراجعة انجليزي أول متوسط الترم الثالث</button>
+  <button class="button" style="--order:8" onclick="goToLink('مراجعة انجليزي ثاني متوسط الترم الثالث', 'https://drive.google.com/file/d/1XNIpdzRyFXXS5V0w9iyRXJPlWLIvRxLB/view?usp=drivesdk')">مراجعة انجليزي ثاني متوسط الترم الثالث</button>
+  <button class="button" style="--order:9" onclick="goToLink('مراجعة انجليزي ثالث متوسط الترم الثالث', 'https://drive.google.com/file/d/1pob2mnm_V1sMjodXwxSQ-ieGsnZjFBTR/view?usp=drivesdk')">مراجعة انجليزي ثالث متوسط الترم الثالث</button>
 
   <div class="section-title">المرحلة الثانوية</div>
-  <button class="button" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
-  <button class="button" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
+  <button class="button" style="--order:10" onclick="showMessage('مراجعة انجليزي أول ثانوي الترم الثالث')">مراجعة انجليزي أول ثانوي الترم الثالث</button>
+  <button class="button" style="--order:11" onclick="showMessage('مراجعة انجليزي ثاني ثانوي الترم الثالث')">مراجعة انجليزي ثاني ثانوي الترم الثالث</button>
+  <button class="button" style="--order:12" onclick="showMessage('مراجعة انجليزي ثالث ثانوي الترم الثالث')">مراجعة انجليزي ثالث ثانوي الترم الثالث</button>
 
   <div id="qr-section">
     <p class="label-text" id="qr-label"></p>
@@ -220,14 +202,11 @@
     </div>
   </div>
 
-  <div class="support links-section">
-    <div class="footer-links">
-      <a href="https://www.privacypolicies.com/live/a501e028-3ccc-4524-88bb-59ae0632a03d">سياسة الخصوصية</a>
-      <a href="#">شروط الاستخدام</a>
-      <a href="mailto:ahloka24@gmail.com">اتصل بنا: ahloka24@gmail.com</a>
-    </div>
+  <div class="footer-links">
+    <a href="https://www.privacypolicies.com/live/a501e028-3ccc-4524-88bb-59ae0632a03d">سياسة الخصوصية</a>
+    <a href="#">شروط الاستخدام</a>
+    <a href="#" onclick="openGmail()">اتصل بنا</a>
   </div>
-
 </div>
 
 <script>
@@ -256,6 +235,10 @@
     link.href = qr.toDataURL();
     link.download = 'qr_code.png';
     link.click();
+  }
+
+  function openGmail() {
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=ahloka24@gmail.com', '_blank');
   }
 </script>
 
